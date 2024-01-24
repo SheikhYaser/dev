@@ -1,0 +1,1186 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "TASK MANAGER API",
+        "version": "1.0"
+    },
+    "paths": {
+        "/api/dev": {
+            "get": {
+                "tags": [
+                    "User API"
+                ],
+                "summary": "Register user",
+                "operationId": "0517224e55b636117fac46253466bbae",
+                "responses": {
+                    "200": {
+                        "description": "Registration user and to login.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "description": "success",
+                                            "format": "boolean",
+                                            "default": "true"
+                                        },
+                                        "data": {
+                                            "description": "data",
+                                            "format": "object",
+                                            "example": {
+                                                "username": "Abdullajon",
+                                                "password": "$2y$10$sZZUV7ykVyAXT7/eDzGyReThtdkaLUK9jknrDEDNaeK71uKeQkfiO",
+                                                "token": "ms7ST2opzINdvWCxLanr8zg21kOKFS",
+                                                "updated_at": "2023-08-28T11:58:12.000000Z",
+                                                "created_at": "2023-08-28T11:58:12.000000Z",
+                                                "id": 1
+                                            }
+                                        },
+                                        "message": {
+                                            "description": "message",
+                                            "format": "string",
+                                            "default": "Login!"
+                                        },
+                                        "error_code": {
+                                            "description": "error_code",
+                                            "format": "integer",
+                                            "default": "0"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/add/student": {
+            "post": {
+                "tags": [
+                    "User API"
+                ],
+                "summary": "Register user",
+                "operationId": "6cfeca03a31a2cf4850e1007957c7ab6",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "fullname": {
+                                        "type": "string",
+                                        "example": "Sarvarbek"
+                                    },
+                                    "avatar": {
+                                        "type": "string",
+                                        "example": "upload/avatar/file/kFSwDf0msLoCMWpyPAL4.jpg"
+                                    },
+                                    "age": {
+                                        "type": "integer",
+                                        "example": "13"
+                                    },
+                                    "address": {
+                                        "type": "string",
+                                        "example": "Andijon"
+                                    },
+                                    "group_id": {
+                                        "type": "integer",
+                                        "example": "1"
+                                    },
+                                    "course_id": {
+                                        "type": "integer",
+                                        "example": "2"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Registration user and to login.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "description": "success",
+                                            "format": "boolean",
+                                            "default": "true"
+                                        },
+                                        "data": {
+                                            "description": "data",
+                                            "format": "object",
+                                            "example": {
+                                                "username": "Abdullajon",
+                                                "password": "$2y$10$sZZUV7ykVyAXT7/eDzGyReThtdkaLUK9jknrDEDNaeK71uKeQkfiO",
+                                                "token": "ms7ST2opzINdvWCxLanr8zg21kOKFS",
+                                                "updated_at": "2023-08-28T11:58:12.000000Z",
+                                                "created_at": "2023-08-28T11:58:12.000000Z",
+                                                "id": 1
+                                            }
+                                        },
+                                        "message": {
+                                            "description": "message",
+                                            "format": "string",
+                                            "default": "Login!"
+                                        },
+                                        "error_code": {
+                                            "description": "error_code",
+                                            "format": "integer",
+                                            "default": "0"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/update/student/{id}": {
+            "post": {
+                "tags": [
+                    "User API"
+                ],
+                "summary": "Register user",
+                "operationId": "940c3fd21488f30614740d9e4539632f",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Paste task id",
+                        "required": true
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "fullname": {
+                                        "type": "string",
+                                        "example": "Sarvarbek 2"
+                                    },
+                                    "avatar": {
+                                        "type": "string",
+                                        "example": "upload/avatar/file/kFSwDf0msLoCMWpyPAL4.jpg"
+                                    },
+                                    "age": {
+                                        "type": "integer",
+                                        "example": "13"
+                                    },
+                                    "address": {
+                                        "type": "string",
+                                        "example": "Andijon"
+                                    },
+                                    "group_id": {
+                                        "type": "integer",
+                                        "example": "1"
+                                    },
+                                    "course_id": {
+                                        "type": "integer",
+                                        "example": "2"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Registration user and to login.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "description": "success",
+                                            "format": "boolean",
+                                            "default": "true"
+                                        },
+                                        "data": {
+                                            "description": "data",
+                                            "format": "object",
+                                            "example": {
+                                                "username": "Abdullajon",
+                                                "password": "$2y$10$sZZUV7ykVyAXT7/eDzGyReThtdkaLUK9jknrDEDNaeK71uKeQkfiO",
+                                                "token": "ms7ST2opzINdvWCxLanr8zg21kOKFS",
+                                                "updated_at": "2023-08-28T11:58:12.000000Z",
+                                                "created_at": "2023-08-28T11:58:12.000000Z",
+                                                "id": 1
+                                            }
+                                        },
+                                        "message": {
+                                            "description": "message",
+                                            "format": "string",
+                                            "default": "Login!"
+                                        },
+                                        "error_code": {
+                                            "description": "error_code",
+                                            "format": "integer",
+                                            "default": "0"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/delete/student/{id}": {
+            "delete": {
+                "tags": [
+                    "User API"
+                ],
+                "summary": "Register user",
+                "operationId": "a37e900e7a1404228cc7f214fd334582",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Paste task id",
+                        "required": true
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "fullname": {
+                                        "type": "string",
+                                        "example": "Sarvarbek"
+                                    },
+                                    "avatar": {
+                                        "type": "string",
+                                        "example": "upload/avatar/file/kFSwDf0msLoCMWpyPAL4.jpg"
+                                    },
+                                    "age": {
+                                        "type": "integer",
+                                        "example": "13"
+                                    },
+                                    "address": {
+                                        "type": "string",
+                                        "example": "Andijon"
+                                    },
+                                    "group_id": {
+                                        "type": "integer",
+                                        "example": "1"
+                                    },
+                                    "course_id": {
+                                        "type": "integer",
+                                        "example": "2"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Registration user and to login.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "description": "success",
+                                            "format": "boolean",
+                                            "default": "true"
+                                        },
+                                        "data": {
+                                            "description": "data",
+                                            "format": "object",
+                                            "example": {
+                                                "username": "Abdullajon",
+                                                "password": "$2y$10$sZZUV7ykVyAXT7/eDzGyReThtdkaLUK9jknrDEDNaeK71uKeQkfiO",
+                                                "token": "ms7ST2opzINdvWCxLanr8zg21kOKFS",
+                                                "updated_at": "2023-08-28T11:58:12.000000Z",
+                                                "created_at": "2023-08-28T11:58:12.000000Z",
+                                                "id": 1
+                                            }
+                                        },
+                                        "message": {
+                                            "description": "message",
+                                            "format": "string",
+                                            "default": "Login!"
+                                        },
+                                        "error_code": {
+                                            "description": "error_code",
+                                            "format": "integer",
+                                            "default": "0"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/register": {
+            "post": {
+                "tags": [
+                    "User API"
+                ],
+                "summary": "Register user",
+                "operationId": "b91575f479176230541020cbbe70d4d3",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "fullname": {
+                                        "type": "string",
+                                        "example": "Sarvarbek"
+                                    },
+                                    "phone": {
+                                        "type": "string",
+                                        "example": "1525152162"
+                                    },
+                                    "password": {
+                                        "type": "string",
+                                        "example": "123456"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Registration user and to login.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "description": "success",
+                                            "format": "boolean",
+                                            "default": "true"
+                                        },
+                                        "data": {
+                                            "description": "data",
+                                            "format": "object",
+                                            "example": {
+                                                "fullname": "Abdullajon",
+                                                "password": "$2y$10$sZZUV7ykVyAXT7/eDzGyReThtdkaLUK9jknrDEDNaeK71uKeQkfiO",
+                                                "token": "ms7ST2opzINdvWCxLanr8zg21kOKFS",
+                                                "phone": "166632623",
+                                                "updated_at": "2023-08-28T11:58:12.000000Z",
+                                                "created_at": "2023-08-28T11:58:12.000000Z",
+                                                "id": 1
+                                            }
+                                        },
+                                        "message": {
+                                            "description": "message",
+                                            "format": "string",
+                                            "default": "Login!"
+                                        },
+                                        "error_code": {
+                                            "description": "error_code",
+                                            "format": "integer",
+                                            "default": "0"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/login": {
+            "post": {
+                "tags": [
+                    "User API"
+                ],
+                "summary": "Register user",
+                "operationId": "a31bffef3b64c1e19862cec1d22db401",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "phone": {
+                                        "type": "string",
+                                        "example": "1525152162"
+                                    },
+                                    "password": {
+                                        "type": "string",
+                                        "example": "123456"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Registration user and to login.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "description": "success",
+                                            "format": "boolean",
+                                            "default": "true"
+                                        },
+                                        "data": {
+                                            "description": "data",
+                                            "format": "object",
+                                            "example": {
+                                                "fullname": "Abdullajon",
+                                                "password": "$2y$10$sZZUV7ykVyAXT7/eDzGyReThtdkaLUK9jknrDEDNaeK71uKeQkfiO",
+                                                "updated_at": "2023-08-28T11:58:12.000000Z",
+                                                "created_at": "2023-08-28T11:58:12.000000Z",
+                                                "id": 1
+                                            }
+                                        },
+                                        "message": {
+                                            "description": "message",
+                                            "format": "string",
+                                            "default": "Login!"
+                                        },
+                                        "error_code": {
+                                            "description": "error_code",
+                                            "format": "integer",
+                                            "default": "0"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/get": {
+            "get": {
+                "tags": [
+                    "User API"
+                ],
+                "summary": "Register user",
+                "operationId": "78ab02b03e430325937c4d9613a11f02",
+                "parameters": [
+                    {
+                        "name": "Token",
+                        "in": "header",
+                        "description": "User token",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Registration user and to login.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "description": "success",
+                                            "format": "boolean",
+                                            "default": "true"
+                                        },
+                                        "data": {
+                                            "description": "data",
+                                            "format": "object",
+                                            "example": {
+                                                "id": 9,
+                                                "fullname": "Sarvarbek",
+                                                "avatar": null,
+                                                "age": null,
+                                                "address": null,
+                                                "token": "F0B0Jj9a5ZOrd5kAu2Dsgr6xx6S1XK",
+                                                "password": "$2y$12$2ShDf.Ev8XavVZI7.PDcYOpkfj9DjfL3SQGrqVIdm.P9QIa0pZCPW",
+                                                "phone": "994630613",
+                                                "group_id": null,
+                                                "course_id": null,
+                                                "created_at": "2024-01-13T09:05:53.000000Z"
+                                            }
+                                        },
+                                        "message": {
+                                            "description": "message",
+                                            "format": "string",
+                                            "default": "Login!"
+                                        },
+                                        "error_code": {
+                                            "description": "error_code",
+                                            "format": "integer",
+                                            "default": "0"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/course": {
+            "get": {
+                "tags": [
+                    "User API"
+                ],
+                "summary": "Register user",
+                "operationId": "61d08a8529e69fac1c9543a57e65dfb6",
+                "responses": {
+                    "200": {
+                        "description": "Registration user and to login.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "description": "success",
+                                            "format": "boolean",
+                                            "default": "true"
+                                        },
+                                        "data": {
+                                            "description": "data",
+                                            "format": "object",
+                                            "example": {
+                                                "username": "Abdullajon",
+                                                "password": "$2y$10$sZZUV7ykVyAXT7/eDzGyReThtdkaLUK9jknrDEDNaeK71uKeQkfiO",
+                                                "token": "ms7ST2opzINdvWCxLanr8zg21kOKFS",
+                                                "updated_at": "2023-08-28T11:58:12.000000Z",
+                                                "created_at": "2023-08-28T11:58:12.000000Z",
+                                                "id": 1
+                                            }
+                                        },
+                                        "message": {
+                                            "description": "message",
+                                            "format": "string",
+                                            "default": "Login!"
+                                        },
+                                        "error_code": {
+                                            "description": "error_code",
+                                            "format": "integer",
+                                            "default": "0"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/add/course": {
+            "post": {
+                "tags": [
+                    "User API"
+                ],
+                "summary": "Register user",
+                "operationId": "3d4e453f1c0df4d6b5b317af1641238d",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "name": {
+                                        "type": "string",
+                                        "example": "BackEnd"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Registration user and to login.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "description": "success",
+                                            "format": "boolean",
+                                            "default": "true"
+                                        },
+                                        "data": {
+                                            "description": "data",
+                                            "format": "object",
+                                            "example": {
+                                                "username": "Abdullajon",
+                                                "password": "$2y$10$sZZUV7ykVyAXT7/eDzGyReThtdkaLUK9jknrDEDNaeK71uKeQkfiO",
+                                                "token": "ms7ST2opzINdvWCxLanr8zg21kOKFS",
+                                                "updated_at": "2023-08-28T11:58:12.000000Z",
+                                                "created_at": "2023-08-28T11:58:12.000000Z",
+                                                "id": 1
+                                            }
+                                        },
+                                        "message": {
+                                            "description": "message",
+                                            "format": "string",
+                                            "default": "Login!"
+                                        },
+                                        "error_code": {
+                                            "description": "error_code",
+                                            "format": "integer",
+                                            "default": "0"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/update/course/{id}": {
+            "post": {
+                "tags": [
+                    "User API"
+                ],
+                "summary": "Register user",
+                "operationId": "a8a683a1fbbcef71ab8606a29f89321c",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Paste task id",
+                        "required": true
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "name": {
+                                        "type": "string",
+                                        "example": "BackEnd"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Registration user and to login.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "description": "success",
+                                            "format": "boolean",
+                                            "default": "true"
+                                        },
+                                        "data": {
+                                            "description": "data",
+                                            "format": "object",
+                                            "example": {
+                                                "username": "Abdullajon",
+                                                "password": "$2y$10$sZZUV7ykVyAXT7/eDzGyReThtdkaLUK9jknrDEDNaeK71uKeQkfiO",
+                                                "token": "ms7ST2opzINdvWCxLanr8zg21kOKFS",
+                                                "updated_at": "2023-08-28T11:58:12.000000Z",
+                                                "created_at": "2023-08-28T11:58:12.000000Z",
+                                                "id": 1
+                                            }
+                                        },
+                                        "message": {
+                                            "description": "message",
+                                            "format": "string",
+                                            "default": "Login!"
+                                        },
+                                        "error_code": {
+                                            "description": "error_code",
+                                            "format": "integer",
+                                            "default": "0"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/delete/course/{id}": {
+            "delete": {
+                "tags": [
+                    "User API"
+                ],
+                "summary": "Register user",
+                "operationId": "e052aa1901ee6ccef56f495ba9bbcfbb",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Paste task id",
+                        "required": true
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "name": {
+                                        "type": "string",
+                                        "example": "BackEnd"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Registration user and to login.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "description": "success",
+                                            "format": "boolean",
+                                            "default": "true"
+                                        },
+                                        "data": {
+                                            "description": "data",
+                                            "format": "object",
+                                            "example": {
+                                                "username": "Abdullajon",
+                                                "password": "$2y$10$sZZUV7ykVyAXT7/eDzGyReThtdkaLUK9jknrDEDNaeK71uKeQkfiO",
+                                                "token": "ms7ST2opzINdvWCxLanr8zg21kOKFS",
+                                                "updated_at": "2023-08-28T11:58:12.000000Z",
+                                                "created_at": "2023-08-28T11:58:12.000000Z",
+                                                "id": 1
+                                            }
+                                        },
+                                        "message": {
+                                            "description": "message",
+                                            "format": "string",
+                                            "default": "Login!"
+                                        },
+                                        "error_code": {
+                                            "description": "error_code",
+                                            "format": "integer",
+                                            "default": "0"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/group": {
+            "get": {
+                "tags": [
+                    "User API"
+                ],
+                "summary": "Register user",
+                "operationId": "30b34775fa0c49a87b69cbb76ce8dc73",
+                "responses": {
+                    "200": {
+                        "description": "Registration user and to login.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "description": "success",
+                                            "format": "boolean",
+                                            "default": "true"
+                                        },
+                                        "data": {
+                                            "description": "data",
+                                            "format": "object",
+                                            "example": {
+                                                "username": "Abdullajon",
+                                                "password": "$2y$10$sZZUV7ykVyAXT7/eDzGyReThtdkaLUK9jknrDEDNaeK71uKeQkfiO",
+                                                "token": "ms7ST2opzINdvWCxLanr8zg21kOKFS",
+                                                "updated_at": "2023-08-28T11:58:12.000000Z",
+                                                "created_at": "2023-08-28T11:58:12.000000Z",
+                                                "id": 1
+                                            }
+                                        },
+                                        "message": {
+                                            "description": "message",
+                                            "format": "string",
+                                            "default": "Login!"
+                                        },
+                                        "error_code": {
+                                            "description": "error_code",
+                                            "format": "integer",
+                                            "default": "0"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/add/group": {
+            "post": {
+                "tags": [
+                    "User API"
+                ],
+                "summary": "Register user",
+                "operationId": "86b5b606cce3642b099fa9139d5c1429",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "name": {
+                                        "type": "string",
+                                        "example": "b11"
+                                    },
+                                    "course_id": {
+                                        "type": "integer",
+                                        "example": "2"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Registration user and to login.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "description": "success",
+                                            "format": "boolean",
+                                            "default": "true"
+                                        },
+                                        "data": {
+                                            "description": "data",
+                                            "format": "object",
+                                            "example": {
+                                                "username": "Abdullajon",
+                                                "password": "$2y$10$sZZUV7ykVyAXT7/eDzGyReThtdkaLUK9jknrDEDNaeK71uKeQkfiO",
+                                                "token": "ms7ST2opzINdvWCxLanr8zg21kOKFS",
+                                                "updated_at": "2023-08-28T11:58:12.000000Z",
+                                                "created_at": "2023-08-28T11:58:12.000000Z",
+                                                "id": 1
+                                            }
+                                        },
+                                        "message": {
+                                            "description": "message",
+                                            "format": "string",
+                                            "default": "Login!"
+                                        },
+                                        "error_code": {
+                                            "description": "error_code",
+                                            "format": "integer",
+                                            "default": "0"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/update/group/{id}": {
+            "post": {
+                "tags": [
+                    "User API"
+                ],
+                "summary": "Register user",
+                "operationId": "9ab3a4001b56dbac66fbea1834d9b85e",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Paste task id",
+                        "required": true
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "name": {
+                                        "type": "string",
+                                        "example": "b11"
+                                    },
+                                    "course_id": {
+                                        "type": "integer",
+                                        "example": "2"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Registration user and to login.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "description": "success",
+                                            "format": "boolean",
+                                            "default": "true"
+                                        },
+                                        "data": {
+                                            "description": "data",
+                                            "format": "object",
+                                            "example": {
+                                                "username": "Abdullajon",
+                                                "password": "$2y$10$sZZUV7ykVyAXT7/eDzGyReThtdkaLUK9jknrDEDNaeK71uKeQkfiO",
+                                                "token": "ms7ST2opzINdvWCxLanr8zg21kOKFS",
+                                                "updated_at": "2023-08-28T11:58:12.000000Z",
+                                                "created_at": "2023-08-28T11:58:12.000000Z",
+                                                "id": 1
+                                            }
+                                        },
+                                        "message": {
+                                            "description": "message",
+                                            "format": "string",
+                                            "default": "Login!"
+                                        },
+                                        "error_code": {
+                                            "description": "error_code",
+                                            "format": "integer",
+                                            "default": "0"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/delete/group/{id}": {
+            "delete": {
+                "tags": [
+                    "User API"
+                ],
+                "summary": "Register user",
+                "operationId": "c60fa37c132c907d2033bedf75f28584",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Paste task id",
+                        "required": true
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "name": {
+                                        "type": "string",
+                                        "example": "b11"
+                                    },
+                                    "course_id": {
+                                        "type": "integer",
+                                        "example": "2"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Registration user and to login.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "description": "success",
+                                            "format": "boolean",
+                                            "default": "true"
+                                        },
+                                        "data": {
+                                            "description": "data",
+                                            "format": "object",
+                                            "example": {
+                                                "username": "Abdullajon",
+                                                "password": "$2y$10$sZZUV7ykVyAXT7/eDzGyReThtdkaLUK9jknrDEDNaeK71uKeQkfiO",
+                                                "token": "ms7ST2opzINdvWCxLanr8zg21kOKFS",
+                                                "updated_at": "2023-08-28T11:58:12.000000Z",
+                                                "created_at": "2023-08-28T11:58:12.000000Z",
+                                                "id": 1
+                                            }
+                                        },
+                                        "message": {
+                                            "description": "message",
+                                            "format": "string",
+                                            "default": "Login!"
+                                        },
+                                        "error_code": {
+                                            "description": "error_code",
+                                            "format": "integer",
+                                            "default": "0"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/image": {
+            "get": {
+                "tags": [
+                    "User API"
+                ],
+                "summary": "Register user",
+                "operationId": "e8983e0aa0d428f53d63a874c571213f",
+                "responses": {
+                    "200": {
+                        "description": "Registration user and to login.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "description": "success",
+                                            "format": "boolean",
+                                            "default": "true"
+                                        },
+                                        "data": {
+                                            "description": "data",
+                                            "format": "object",
+                                            "example": {
+                                                "username": "Abdullajon",
+                                                "password": "$2y$10$sZZUV7ykVyAXT7/eDzGyReThtdkaLUK9jknrDEDNaeK71uKeQkfiO",
+                                                "token": "ms7ST2opzINdvWCxLanr8zg21kOKFS",
+                                                "updated_at": "2023-08-28T11:58:12.000000Z",
+                                                "created_at": "2023-08-28T11:58:12.000000Z",
+                                                "id": 1
+                                            }
+                                        },
+                                        "message": {
+                                            "description": "message",
+                                            "format": "string",
+                                            "default": "Login!"
+                                        },
+                                        "error_code": {
+                                            "description": "error_code",
+                                            "format": "integer",
+                                            "default": "0"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/add/image": {
+            "post": {
+                "tags": [
+                    "User API"
+                ],
+                "summary": "Register user",
+                "operationId": "4418c8a0bd16417e782b4086aec70325",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "image": {
+                                        "type": "string",
+                                        "example": "upload/image/file/rHt7PfnEqNS8cpXBOkOn.png"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Registration user and to login.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "description": "success",
+                                            "format": "boolean",
+                                            "default": "true"
+                                        },
+                                        "data": {
+                                            "description": "data",
+                                            "format": "object",
+                                            "example": {
+                                                "username": "Abdullajon",
+                                                "password": "$2y$10$sZZUV7ykVyAXT7/eDzGyReThtdkaLUK9jknrDEDNaeK71uKeQkfiO",
+                                                "token": "ms7ST2opzINdvWCxLanr8zg21kOKFS",
+                                                "updated_at": "2023-08-28T11:58:12.000000Z",
+                                                "created_at": "2023-08-28T11:58:12.000000Z",
+                                                "id": 1
+                                            }
+                                        },
+                                        "message": {
+                                            "description": "message",
+                                            "format": "string",
+                                            "default": "Login!"
+                                        },
+                                        "error_code": {
+                                            "description": "error_code",
+                                            "format": "integer",
+                                            "default": "0"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
